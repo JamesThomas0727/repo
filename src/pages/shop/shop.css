@@ -1,0 +1,20 @@
+.caption {
+    color: black;
+    letter-spacing: 5px;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    font-size: calc(1.325rem + .9vw) !important;
+    font-family: "consolas";
+    font-size: 16px;
+    font-weight: 400;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
