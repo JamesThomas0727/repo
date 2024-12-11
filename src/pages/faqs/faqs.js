@@ -9,12 +9,18 @@ export default function FAQsPage() {
     useEffect(() => {
         axios.get('http://localhost:5000/faqs')
             .then(response => setFaqs(response.data))
-            .catch(error => console.error('Error fetching data:', error));
+            .catch(error => {
+                console.error('Error fetching data:', error);
+                return (<div>
+                    <strong>Error!</strong>
+                </div>);
+            });
     }, []);
     return (
         <div>
             <div className='faqs-subject'>
-                <strong>Frequently Asked Questions</strong>
+                <br></br>
+                <h2>Frequently Asked Questions</h2>
             </div>
             <Accordion defaultActiveKey="0" flush>
                 {faqs.map(faq => {

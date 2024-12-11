@@ -1,15 +1,15 @@
 import './home.css'
-import Getin from "../../components/getin"
-import Send from "../../components/Send"
+import GetInTouch from "../../components/getintouch/GetInTouch";
+import Send from "../../components/send/Send";
 
-export default function Sendemail(){
-    return(
+export default function Sendemail() {
+    return (
         <div className='Sendemail'>
             <div className='get'>
-<Getin />
+                <GetInTouch />
             </div>
             <div className='send'>
-<Send />
+                <Send />
             </div>
         </div>
     )

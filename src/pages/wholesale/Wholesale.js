@@ -2,10 +2,10 @@ import Emptybox from "../../components/Textbox/Emptybox";
 import Textbox from "../../components/Textbox/Textbox";
 import Contact from "./Contact";
 import Text from "./text";
+import './wholesale.css';
 
-
-export default function Wholesale(){
-    return(
+export default function WholesalePage() {
+    return (
         <div className="wholesale">
             <div className="textleft">
                 <Text />

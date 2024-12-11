@@ -6,8 +6,8 @@ import Mainwin from "../../components/main/Mainwin"
 import Middlewin from "../../components/main/Products"
 import Sendemail from "./Sendemail"
 
-export default function Home(){
-    return(
+export default function HomePage() {
+    return (
         <div className="App">
             {/* <Header /> */}
             <Mainwin />

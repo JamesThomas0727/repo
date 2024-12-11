@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" width="20" class="b--u-ml-1">
-          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M1 3.5h15" class="c-navbar__button__bar"></path>
-            <path d="M1 8h15" class="c-navbar__button__bar"></path>
-            <path d="M1 12.5h15" class="c-navbar__button__bar"></path>
-          </g>
-        </svg>

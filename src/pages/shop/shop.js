@@ -30,13 +30,6 @@ const product = {
     "moneytype": 4,
 };
 function ShopPage() {
-    const [faqs, setFaqs] = useState([]);
-    useEffect(() => {
-        axios.get('http://localhost:5000/faqs')
-            .then(response => setFaqs(response.data))
-            .catch(error => console.error('Error fetching data:', error));
-    }, []);
-    
     return (
         <Container sx={{ position: 'absolute', background: "transparent" }}>
             <div className="caption">Shop All</div>
@@ -47,13 +40,13 @@ function ShopPage() {
                             <h2>Filter By</h2></div>
                     </Grid>
                     <Grid item xs={9} sx={{ textAlign: "right" }}>
-                        <div><DropdownButton></DropdownButton></div>
+                        <div><DropdownButton /></div>
                     </Grid>
                 </Grid>
                 <hr></hr>
                 <Grid container spacing={2}>
                     <Grid item xs={3}>
-                        <FilterBar></FilterBar>
+                        <FilterBar />
                     </Grid>
                     <Grid item xs={9}>
                         <ProductCard product={product}></ProductCard>

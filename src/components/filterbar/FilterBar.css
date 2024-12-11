@@ -8,6 +8,18 @@
     flex-wrap: wrap;
 }
 
+.body-selected {
+    text-align: left;
+    font-style: "bold";
+    color: red;
+    font-size: large;
+    font-family: 'consolas';
+    margin: 1px;
+    padding: 1px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
 .body:hover {
     background-color: rgb(240, 237, 237);
 }

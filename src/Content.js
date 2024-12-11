@@ -1,48 +1,72 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import appInfo from './app-info';
 import routes from './app-routes';
+import HomePage from './pages/home/home';
 import ShopPage from './pages/shop/shop';
+import ApparelPage from './pages/apparel/apparel';
+import AccessoriesPage from './pages/accessories/accessories';
+import WholesalePage from './pages/wholesale/wholesale';
+import AboutUsPage from './pages/aboutus/aboutus';
 import FAQsPage from './pages/faqs/faqs';
-// import Apparel from './pages/apparel/ApparelPage';
+
+import LoadingPanel from './components/loadingpanel/LoadingPanel';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 // import { SideNavOuterToolbar as SideNavBarLayout } from './layouts';
-// import { Footer } from './components';
 export default function Content() {
   return (
-    // <ShopPage></ShopPage>
-    <div>
-      <FAQsPage></FAQsPage>
-      <ShopPage></ShopPage>
-    </div>
     // <SideNavBarLayout title={appInfo.title}>
-    // <Routes>
-    //   {routes.map(({ path, element }) => (
-    //     <Route
-    //       key={path}
-    //       path={path}
-    //       element={element}
-    //     />
-    //   ))}
-    //   <Route
-    //     path='*'
-    //     element={<Navigate to='/shop' />}
-    //   />
-    // </Routes>
-    // <Footer>
-    //   Copyright © 2001-{new Date().getFullYear()} {appInfo.title}
-    //   <br />
-    //   I am looking forward to hearing from you.
-    //   &nbsp;
-    //   &nbsp;
-    //   &nbsp;
-    //   <a href='mailto:jamesthomasdev2001@gmail.com'>
-    //     jamesthomasdev2001@gmail.com</a>
-    //   <div>
-    //     <MessageBox
-    //       sx={{ width: "20%" }}
-    //     ></MessageBox>
-    //   </div>
-    // </Footer>
-    // </SideNavBarLayout>
+    <div>
+      <Header />
+      <BrowserRouter>
+        <Routes>
+          {/* {routes.map(({ path, element }) => (
+          <Route
+            key={path}
+            path={path}
+            element={element}
+          />
+        ))} */}
+          <Route
+            path='/home'
+            element={<HomePage></HomePage>}
+          />
+          <Route
+            path='*'
+            element={<HomePage></HomePage>}
+          />
+          <Route
+            path='/shop'
+            element={<ShopPage></ShopPage>}
+          />
+          <Route
+            path='/faqs'
+            element={<FAQsPage></FAQsPage>}
+          />
+          <Route
+            path='/apparel'
+            element={<ApparelPage></ApparelPage>}
+          />
+          <Route
+            path='/accessories'
+            element={<AccessoriesPage></AccessoriesPage>}
+          />
+          <Route
+            path='/wholesale'
+            element={<WholesalePage></WholesalePage>}
+          />
+          <Route
+            path='/faqs'
+            element={<FAQsPage></FAQsPage>}
+          />
+          <Route
+            path='/aboutus'
+            element={<AboutUsPage />}
+          />
+        </Routes>
+      </BrowserRouter>
+      <Footer />
+    </div>
   );
 }
 

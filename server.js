@@ -23,19 +23,16 @@ app.get('/', (req, res) => {
 app.get('/faqs', async (req, res) => {
     try {
         const faqs = await FAQModel.find();
-        console.log(faqs);
         res.json(faqs);
     } catch (err) {
         res.status(500).send(err.message);
     }
 });
 app.get('/products', async (req, res) => {
-    let receivedData = req.body;
-    console.log(receivedData);
-
+    let category = req.query;
+    console.log(category);
     try {
         const products = await ProductModel.find();
-        console.log(products);
         res.json(products);
     } catch (err) {
         res.status(500).send(err.message);

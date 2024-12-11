@@ -1,8 +1,8 @@
 import Textbox from '../../components/Textbox/Textbox'
-import './Wholesale.css'
+import './wholesale.css'
 
-export default function Contact(){
-    return(
+export default function Contact() {
+    return (
         <div className='textright'>
             <div className='title2'>
                 <div className='contactus'>
@@ -27,7 +27,7 @@ export default function Contact(){
                         <textarea rows="5"></textarea>
                     </div>
                     <div className='incol'>
-                        
+
                     </div>
                 </div>
             </div>

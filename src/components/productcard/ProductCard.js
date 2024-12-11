@@ -8,7 +8,9 @@ export default function ProductCard(props) {
     let moneystr = moneytypes[moneytype];
     return (
         <div className='card'>
-            <img src={product.img} alt={product.product_name}></img>
+            <img src=
+                "${%PUBLIC_URL%}/images/products/${product.product_avatar_id}.png"
+                alt={product.product_name}></img>
             <strong>{product.product_name}</strong>
             <p className='price'>{moneystr + product.price1}</p>
             {product.price2 && <p className='price-strike'>{moneystr + product.price2}</p>}
